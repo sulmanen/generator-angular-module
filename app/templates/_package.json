@@ -1,10 +1,10 @@
 {
-  "name": "scheduler-ui",
+  "name": "<%= moduleName %>",
   "repository": {
     "type": "git",
-    "url": "git@github.rovio.com:Skynest/rvoNgNVD3.git"
+    "url": "<%= repository %>"
   },
-  "version": "0.0.1",
+  "version": "<%= version %>",
   "engines": {
     "node": ">= 0.8.0"
   },

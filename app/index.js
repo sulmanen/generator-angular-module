@@ -7,8 +7,10 @@ var yeoman = require('yeoman-generator');
 var AngularModuleGenerator = module.exports = function AngularModuleGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
-  this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+  this.on('end', function() {
+    this.installDependencies({
+      skipInstall: options['skip-install']
+    });
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -27,20 +29,50 @@ AngularModuleGenerator.prototype.askFor = function askFor() {
     name: 'moduleName',
     message: 'Name of your module?',
     default: 'ngMod'
+  }, {
+    type: 'input',
+    name: 'moduleDescription',
+    message: 'Module short description...'
+  }, {
+    type: 'input',
+    name: 'version',
+    message: 'Module initial version'
+  }, {
+    type: 'input',
+    name: 'author',
+    message: '... And you are?'
+  }, {
+    type: 'input',
+    name: 'email',
+    message: '... your email address?'
+  }, {
+    type: 'input',
+    name: 'registry',
+    message: '... a private bower registry for your module ...',
+    default: 'http://localhost:8888'
   }];
 
-  this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+  this.prompt(prompts, function(props) {
+    this.moduleName = props.moduleName;
+    this.author = props.author;
+    this.email = props.email;
+    this.moduleDescription = props.moduleDescription;
+    this.version = props.version;
+    this.registry = props.registry;
 
     cb();
   }.bind(this));
 };
 
 AngularModuleGenerator.prototype.app = function app() {
+  this.copy('_Gruntfile.js', 'Gruntfile.js');
+
+
   this.mkdir('app');
   this.mkdir('app/js');
   this.mkdir('app/js/angular');
   this.mkdir('app/js/vendor');
+  this.template('_app.js', 'app/js/angular/app.js');
 
   this.mkdir('test');
   this.mkdir('test/spec');
@@ -50,8 +82,16 @@ AngularModuleGenerator.prototype.app = function app() {
   this.mkdir('test/spec/angular/filters');
   this.mkdir('test/vendor');
 
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.mkdir('conf');
+  this.copy('karma.conf.js', 'conf/karma.conf.js');
+  this.copy('karma.e2e.conf.js', 'conf/karma.e2e.conf.js');
+
+  this.copy('gitignore', '.gitignore');
+  this.template('_README.md', 'README.md');
+
+  this.template('_package.json', 'package.json');
+  this.template('_bower.json', 'bower.json');
+  this.template('_bowerrc', '.bowerrc');
 };
 
 AngularModuleGenerator.prototype.projectfiles = function projectfiles() {

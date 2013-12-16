@@ -1,23 +1,20 @@
 {
-  "name": "rvoNgNVD3",
-  "version": "0.0.1",
+  "name": "<%= moduleName %>",
+  "version": "<%= version %>",
   "authors": [
-    "Samuli Ulmanen <samuli.ulmanen@rovio.com>"
+    "<%= author %> <<%= email %>>"
   ],
-  "description": "NVD3 charting for AngularJS",
-  "main": "rvoNgNVD3.js",
+  "description": "<%= moduleDescription %>",
+  "main": "<%= moduleName %>.js",
   "keywords": [
-    "nvd3",
     "angular",
-    "rovio"
   ],
-  "license": "Proprietary undecided",
+  "license": "undecided",
   "dependencies": {
-    "angular": "1.2.3",
-    "myNVD3-js": "0.0.4"
+    "angular": "1.2.5"
   },
   "devDependencies":  {
-    "angular-mocks": "1.2.3",
-    "angular-scenario": "1.2.3"
+    "angular-mocks": "1.2.5",
+    "angular-scenario": "1.2.5"
   }
 }
