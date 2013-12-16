@@ -1,0 +1,11 @@
+{
+  "directory": "bower_components",
+  "json": "bower.json",
+  "registry": {
+    "register": "<%= registry %>",
+    "search": [
+      "https://bower.herokuapp.com",
+      "<%= registry %>"
+    ]
+  }
+}
