@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['app/js/angular/**/*.js'],
-                dest: 'rvoNgNVD3.js',
+                dest: '<%= moduleName %>.js',
             },
         },
         jshint: {
@@ -121,7 +121,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['clean:all', 'bower', 'lint', 'test', 'concat']);
     grunt.registerTask('lint', ['jshint']);
     grunt.registerTask('unit', ['clean:coverage', 'karma:unit']);
-    //grunt.registerTask('test', ['lint', 'unit', 'e2e']);
     grunt.registerTask('test', ['lint', 'unit']);
     grunt.registerTask('cover', ['coverage']);
     grunt.registerTask('report', ['plato']);

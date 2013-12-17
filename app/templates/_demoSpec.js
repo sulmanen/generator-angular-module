@@ -1,14 +1,12 @@
 (function() {
-	'use strict';
+    'use strict';
 
-	describe('test case', function() {
-		var factory;
+    describe('test case', function() {
 
-		beforeEach(module('<%= moduleName %>'));
+        beforeEach(module('<%= moduleName %>'));
 
-		it('should get you started', function() {
-			expect(true).toBeDefined();
-		});
-
-	});
+        it('should get you started', function() {
+            expect({}).toBeDefined();
+        });
+    });
 }());
