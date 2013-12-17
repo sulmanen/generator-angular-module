@@ -79,7 +79,7 @@ AngularModuleGenerator.prototype.app = function app() {
   this.template('_app.js', 'app/js/angular/app.js');
 
   this.mkdir('test');
-  this.copy('testjshintrc', '.jshintrc');
+  this.copy('testjshintrc', 'test/.jshintrc');
   this.mkdir('test/spec');
   this.mkdir('test/spec/angular');
   this.mkdir('test/spec/angular/services');
