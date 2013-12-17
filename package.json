@@ -1,6 +1,6 @@
 {
   "name": "generator-ng-mod",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A generator for AngularJS modules",
   "keywords": [
     "yeoman-generator", "angular", "angularjs", "bower", "private"
