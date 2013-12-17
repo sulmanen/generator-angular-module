@@ -92,9 +92,9 @@ AngularModuleGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('mainjshintrc', '.jshintrc');
   this.template('_Gruntfile.js', 'Gruntfile.js');
 
-  this.mkdir('conf');
-  this.copy('karma.conf.js', 'conf/karma.conf.js');
-  this.copy('karma.e2e.conf.js', 'conf/karma.e2e.conf.js');
+  this.mkdir('config');
+  this.copy('karma.conf.js', 'config/karma.conf.js');
+  this.copy('karma.e2e.conf.js', 'config/karma.e2e.conf.js');
 
   this.copy('gitignore', '.gitignore');
   this.template('_README.md', 'README.md');
