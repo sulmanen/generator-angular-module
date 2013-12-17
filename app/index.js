@@ -45,7 +45,13 @@ AngularModuleGenerator.prototype.askFor = function askFor() {
     type: 'input',
     name: 'email',
     message: '... your email address?'
-  }, {
+  },
+  {
+    type: 'input',
+    name: 'repository',
+    message: 'git repo address?'
+  },
+  {
     type: 'input',
     name: 'registry',
     message: '... a private bower registry for your module ...',
@@ -59,7 +65,7 @@ AngularModuleGenerator.prototype.askFor = function askFor() {
     this.moduleDescription = props.moduleDescription;
     this.version = props.version;
     this.registry = props.registry;
-
+    this.repository = props.repository;
     cb();
   }.bind(this));
 };
