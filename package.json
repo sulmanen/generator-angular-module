@@ -1,5 +1,5 @@
 {
-  "name": "generator-angular-module",
+  "name": "generator-ng-mod",
   "version": "0.0.1",
   "description": "A generator for AngularJS modules",
   "keywords": [
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/sulmanen/generator-angular-module/issues",
   "author": {
     "name": "Samuli Ulmanen",
-    "email": "",
+    "email": "s.ulmanen@gmail.com",
     "url": "https://github.com/sulmanen"
   },
   "main": "app/index.js",
