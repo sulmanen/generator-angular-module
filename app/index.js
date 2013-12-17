@@ -65,9 +65,6 @@ AngularModuleGenerator.prototype.askFor = function askFor() {
 };
 
 AngularModuleGenerator.prototype.app = function app() {
-  this.copy('_Gruntfile.js', 'Gruntfile.js');
-
-
   this.mkdir('app');
   this.mkdir('app/js');
   this.mkdir('app/js/angular');
@@ -81,6 +78,11 @@ AngularModuleGenerator.prototype.app = function app() {
   this.mkdir('test/spec/angular/factories');
   this.mkdir('test/spec/angular/filters');
   this.mkdir('test/vendor');
+};
+
+AngularModuleGenerator.prototype.projectfiles = function projectfiles() {
+  this.copy('jshintrc', '.jshintrc');
+  this.template('_Gruntfile.js', 'Gruntfile.js');
 
   this.mkdir('conf');
   this.copy('karma.conf.js', 'conf/karma.conf.js');
@@ -92,9 +94,4 @@ AngularModuleGenerator.prototype.app = function app() {
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   this.template('_bowerrc', '.bowerrc');
-};
-
-AngularModuleGenerator.prototype.projectfiles = function projectfiles() {
-  this.copy('editorconfig', '.editorconfig');
-  this.copy('jshintrc', '.jshintrc');
 };
