@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "A generator for AngularJS modules",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator", "angular", "angularjs", "bower", "private"
   ],
   "homepage": "https://github.com/sulmanen/generator-angular-module",
   "bugs": "https://github.com/sulmanen/generator-angular-module/issues",

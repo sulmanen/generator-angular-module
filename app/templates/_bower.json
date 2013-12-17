@@ -7,7 +7,7 @@
   "description": "<%= moduleDescription %>",
   "main": "<%= moduleName %>.js",
   "keywords": [
-    "angular",
+    "angular"
   ],
   "license": "undecided",
   "dependencies": {

@@ -72,7 +72,7 @@ AngularModuleGenerator.prototype.askFor = function askFor() {
 
 AngularModuleGenerator.prototype.app = function app() {
   this.mkdir('app');
-  this.copy('appjshintrc', '.jshintrc');
+  this.copy('appjshintrc', 'app/.jshintrc');
   this.mkdir('app/js');
   this.mkdir('app/js/angular');
   this.mkdir('app/js/vendor');
