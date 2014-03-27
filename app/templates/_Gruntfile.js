@@ -2,7 +2,7 @@
 
 var IS_TEAM_CITY = !! process.env.TEAMCITY_VERSION;
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
                 options: {
                     targetDir: './app/js/vendor',
                     // this will strip component name
-                    layout: function() {
+                    layout: function () {
                         return '';
                     },
                     install: false,
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
                 options: {
                     targetDir: './test/vendor',
                     // this will strip component name
-                    layout: function() {
+                    layout: function () {
                         return '';
                     },
                     install: false,

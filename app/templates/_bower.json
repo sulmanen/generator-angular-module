@@ -10,6 +10,17 @@
     "angular"
   ],
   "license": "undecided",
+   "ignore": [
+    "**/.*",
+    "Gruntfile.js",
+    "README.md",
+    "package.json",
+    "app",
+    "config",
+    "test",
+    "node_modules",
+    "bower_components"
+  ],
   "dependencies": {
     "angular": "1.2.5"
   },
